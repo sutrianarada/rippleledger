@@ -20,6 +20,10 @@ app.listen(port, () => {
   console.log(`App running on port ${port}.`)
 })
 
+app.get('/', (req, res) => {
+  res.sendFile(join(__dirname + '/view/front.html'));
+})
+
 const userSanitizeResponse = (request, response) => {
   const errors = validationResult(request);
   if (!errors.isEmpty()) {
@@ -42,22 +46,6 @@ async function runTools (index,site) {
     })
   })
   }
-
-
-  // try {
-  //   exec( comandstr, function (err, stdout, stderr){
-  //     if(err){
-  //       console.log(err)
-  //       response.status(200).send(err)
-  //     }
-  //     console.log(stdout);
-  //     console.log(stderr);
-  //   })
-  // }
-  // catch(err){
-  //   response.status(400).send(err)
-  // }
-
 
 async function readData (request,response) {
   if (userSanitizeResponse(request, response)==true) {

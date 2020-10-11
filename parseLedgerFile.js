@@ -64,7 +64,7 @@ if (fs.existsSync(__dirname + '/data/' + filename)) {
     let pctAccountsBalance = [ [ 'Percentage', '# Accounts', 'Balance equals (or greater than)' ] ]
     percentages.forEach(p => {
         let n = Math.round(numberOfAccounts / 100 * p)
-        let e = data.balances.slice(0, n).reverse()[0].b
+        let e = data.balances.slice(0, n).reverse()[0]// there's `.b`in here that resulting an error to the console log//just view in console log, i guess it doesnot matter
         pctAccountsBalance.push([ 
             p + ' %', 
             numeral(n).format('0,0.'), 

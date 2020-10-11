@@ -15,7 +15,8 @@
   "scripts": {
     "fetch": "node fetchLedger.js",
     "stats": "node parseLedgerFile.js",
-    "batch": "bash batchFetchCalc.sh"
+    "batch": "bash batchFetchCalc.sh",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

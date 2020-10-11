@@ -1,7 +1,7 @@
 const express =  require("express");
 const { json, urlencoded }= require('body-parser');
 const app = express();
-const port = 3000;
+const port = process.env.PORT ||3000;
 const { join, resolve } =  require('path');
 const fs = require('fs')
 const {exec} = require('child_process');

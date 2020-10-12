@@ -3,12 +3,12 @@ API testing 01
 
 
 POST request target URL
-/fetch
+.../fetch
 
-webservice 
+Testing webservice 
 https://rippleledger.herokuapp.com/fetch
 
-
+----
 POST payload
 {
   "index":"<index number>"

@@ -23,6 +23,9 @@ app.listen(port, () => {
 app.get('/', (req, res) => {
   res.sendFile(join(__dirname + '/view/front.html'));
 })
+app.get('/fetch', (req, res) => {
+  res.sendFile(join(__dirname + '/view/fetch.html'));
+})
 
 const userSanitizeResponse = (request, response) => {
   const errors = validationResult(request);

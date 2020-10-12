@@ -1,6 +1,14 @@
 # rippleledger
 API testing 01
 
+
+POST request target URL
+/fetch
+
+webservice 
+https://rippleledger.herokuapp.com/fetch
+
+
 POST payload
 {
   "index":"<index number>"
@@ -8,7 +16,10 @@ POST payload
 }
 
 e.g
-
+{
+    "index":"32571",
+    "site":"s2.ripple.com"
+}
 
 ----
 Tools Repo
